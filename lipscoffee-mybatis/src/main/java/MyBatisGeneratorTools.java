@@ -17,7 +17,7 @@ public class MyBatisGeneratorTools {
         List<String> warnings = new ArrayList<String>();
         ConfigurationParser cp = new ConfigurationParser(warnings);
         Configuration config = cp.parseConfiguration(tools.getClass().getClassLoader().getResourceAsStream("config.xml"));
-        config.addClasspathEntry(System.getProperty("user.dir").concat("/lipscoffee-mybatis/src/main/java/lib/mysql-connector-java-5.1.35.jar"));
+        config.addClasspathEntry(System.getProperty("user.dir").concat("/lipscoffee-mybatis/src/main/resources/mysql-connector-java-5.1.35.jar"));
         config.getContext("MysqlContext").getJavaModelGeneratorConfiguration().setTargetProject(System.getProperty("user.dir").concat("/lipscoffee-dao/src/main/java"));
         config.getContext("MysqlContext").getSqlMapGeneratorConfiguration().setTargetProject(System.getProperty("user.dir").concat("/lipscoffee-dao/src/main/resources"));
         config.getContext("MysqlContext").getJavaClientGeneratorConfiguration().setTargetProject(System.getProperty("user.dir").concat("/lipscoffee-dao/src/main/java"));

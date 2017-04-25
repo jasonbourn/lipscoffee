@@ -12,8 +12,4 @@ public class TestControllerTest extends BaseControllerTest {
     public void testDate() throws Exception {
         System.out.println(apiManager.test.home());
     }
-    @Test
-    public void page() throws Exception {
-        System.out.println(apiManager.test.pageTest());
-    }
 }
