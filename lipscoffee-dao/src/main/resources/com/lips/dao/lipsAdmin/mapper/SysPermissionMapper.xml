@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lips.dao.lipsAdmin.SysPermissionMapper" >
+  <resultMap id="BaseResultMap" type="com.lips.dao.lipsAdmin.pojo.SysPermission" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="permission_name" property="permission_name" jdbcType="VARCHAR" />
+    <result column="permission_type" property="permission_type" jdbcType="INTEGER" />
+    <result column="permission_key" property="permission_key" jdbcType="VARCHAR" />
+    <result column="permission_url" property="permission_url" jdbcType="VARCHAR" />
+    <result column="permission_icon" property="permission_icon" jdbcType="VARCHAR" />
+    <result column="weight" property="weight" jdbcType="INTEGER" />
+    <result column="sidebar" property="sidebar" jdbcType="BIT" />
+    <result column="remarks" property="remarks" jdbcType="VARCHAR" />
+    <result column="display" property="display" jdbcType="BIT" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from sys_permission
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.lips.dao.lipsAdmin.pojo.SysPermission" >
+    insert into sys_permission (id, permission_name, permission_type, 
+      permission_key, permission_url, permission_icon, 
+      weight, sidebar, remarks, 
+      display)
+    values (#{id,jdbcType=BIGINT}, #{permission_name,jdbcType=VARCHAR}, #{permission_type,jdbcType=INTEGER}, 
+      #{permission_key,jdbcType=VARCHAR}, #{permission_url,jdbcType=VARCHAR}, #{permission_icon,jdbcType=VARCHAR}, 
+      #{weight,jdbcType=INTEGER}, #{sidebar,jdbcType=BIT}, #{remarks,jdbcType=VARCHAR}, 
+      #{display,jdbcType=BIT})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.lips.dao.lipsAdmin.pojo.SysPermission" >
+    update sys_permission
+    set permission_name = #{permission_name,jdbcType=VARCHAR},
+      permission_type = #{permission_type,jdbcType=INTEGER},
+      permission_key = #{permission_key,jdbcType=VARCHAR},
+      permission_url = #{permission_url,jdbcType=VARCHAR},
+      permission_icon = #{permission_icon,jdbcType=VARCHAR},
+      weight = #{weight,jdbcType=INTEGER},
+      sidebar = #{sidebar,jdbcType=BIT},
+      remarks = #{remarks,jdbcType=VARCHAR},
+      display = #{display,jdbcType=BIT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select id, permission_name, permission_type, permission_key, permission_url, permission_icon, 
+    weight, sidebar, remarks, display
+    from sys_permission
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select id, permission_name, permission_type, permission_key, permission_url, permission_icon, 
+    weight, sidebar, remarks, display
+    from sys_permission
+  </select>
+</mapper>
