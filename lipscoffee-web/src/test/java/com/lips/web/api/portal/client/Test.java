@@ -1,18 +1,22 @@
 package com.lips.web.api.portal.client;
 
-import com.github.pagehelper.Page;
+import com.github.pagehelper.PageInfo;
 import com.lips.dao.lipsAdmin.pojo.SysUser;
-import org.forkjoin.apikit.client.ApiType;
-import org.forkjoin.apikit.client.ApiUtils;
-import org.forkjoin.apikit.client.Callback;
-import org.forkjoin.apikit.client.HttpClientAdapter;
+import com.lips.web.service.TestService;
 import org.forkjoin.apikit.core.Result;
-
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+import javax.annotation.Resource;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+
+import java.util.*;
 import java.util.concurrent.Future;
+import java.util.Map.Entry;
+
+import org.forkjoin.apikit.client.*;
 
 /**
  * Created by qiang on 2017/4/24.
@@ -161,15 +165,15 @@ public class Test {
 	 *
 	 * <div class='http-info'>http 说明：<b>Api Url:</b> <b>/pageTest</b>
 	 * <ul>
-	 * <li><b>Model:</b> Page</li>
+	 * <li><b>Model:</b> PageInfo&lt;SysUser&gt;</li>
 	 * <li>需要登录</li>
 	 * </ul>
 	 * </div>
-	 * @see Page
+	 * @see PageInfo&lt;SysUser&gt;
 
 	 */
-	public Page pageTestData() {
-		Result<Page> result = pageTest();
+	public PageInfo<SysUser> pageTestData() {
+		Result<PageInfo<SysUser>> result = pageTest();
 		if (!result.isSuccess()) {
 			Exception ex = result.getException();
 			if (ex != null) {
@@ -186,14 +190,14 @@ public class Test {
 	 *
 	 * <div class='http-info'>http 说明：<b>Api Url:</b> <b>/pageTest</b>
 	 * <ul>
-	 * <li><b>Model:</b> Page</li>
+	 * <li><b>Model:</b> PageInfo&lt;SysUser&gt;</li>
 	 * <li>需要登录</li>
 	 * </ul>
 	 * </div>
-	 * @see Page
+	 * @see PageInfo&lt;SysUser&gt;
 
 	 */
-	public Result<Page> pageTest() {
+	public Result<PageInfo<SysUser>> pageTest() {
 		Map<String, Object> _uriVariables = new HashMap<>();
 		String _url = ApiUtils.expandUriComponent("/pageTest", _uriVariables);
 
@@ -205,14 +209,14 @@ public class Test {
 	 *
 	 * <div class='http-info'>http 说明：<b>Api Url:</b> <b>/pageTest</b>
 	 * <ul>
-	 * <li><b>Model:</b> Page</li>
+	 * <li><b>Model:</b> PageInfo&lt;SysUser&gt;</li>
 	 * <li>需要登录</li>
 	 * </ul>
 	 * </div>
-	 * @see Page
+	 * @see PageInfo&lt;SysUser&gt;
 
 	 */
-	public Future<?> pageTest(Callback<Page> callable) {
+	public Future<?> pageTest(Callback<PageInfo<SysUser>> callable) {
 		Map<String, Object> _uriVariables = new HashMap<>();
 		String _url = ApiUtils.expandUriComponent("/pageTest", _uriVariables);
 
@@ -222,5 +226,6 @@ public class Test {
 	private static final ApiType _0Type = ApiUtils.type(Result.class,
 			ApiUtils.type(List.class, ApiUtils.type(SysUser.class)));
 	private static final ApiType _1Type = ApiUtils.type(Result.class, ApiUtils.type(String.class));
-	private static final ApiType _2Type = ApiUtils.type(Result.class, ApiUtils.type(Page.class));
+	private static final ApiType _2Type = ApiUtils.type(Result.class,
+			ApiUtils.type(PageInfo.class, ApiUtils.type(SysUser.class)));
 }

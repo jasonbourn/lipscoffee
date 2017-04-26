@@ -175,7 +175,7 @@
                         <id>checkstyle</id>
                         <phase>validate</phase>
                         <goals>
-                            <goal>check</goal>
+                            <goal>checkstyle</goal>
                         </goals>
                         <configuration>
                             <failOnViolation>true</failOnViolation>

@@ -2,6 +2,8 @@ package com.lips.web.api.portal.client;
 
 import org.forkjoin.apikit.client.HttpClientAdapter;
 
+import com.lips.web.api.portal.client.Test;
+
 /**
  * api 管理器，单例，使用之前需要初始化
  * @author zuoge85 on 15/6/15.
