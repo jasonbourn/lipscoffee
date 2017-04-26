@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.lips.dao.lipsAdmin.SysUserRoleMapper" >
-  <resultMap id="BaseResultMap" type="com.lips.dao.lipsAdmin.pojo.SysUserRole" >
-    <id column="user_id" property="user_id" jdbcType="BIGINT" />
-    <id column="role_id" property="role_id" jdbcType="BIGINT" />
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lips.dao.lipsAdmin.SysUserRoleMapper">
+  <resultMap id="BaseResultMap" type="com.lips.dao.lipsAdmin.pojo.SysUserRole">
+    <id column="user_id" jdbcType="BIGINT" property="userId" />
+    <id column="role_id" jdbcType="BIGINT" property="roleId" />
   </resultMap>
-  <delete id="deleteByPrimaryKey" parameterType="map" >
+  <delete id="deleteByPrimaryKey" parameterType="map">
     delete from sys_user_role
-    where user_id = #{user_id,jdbcType=BIGINT}
-      and role_id = #{role_id,jdbcType=BIGINT}
+    where user_id = #{userId,jdbcType=BIGINT}
+      and role_id = #{roleId,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="com.lips.dao.lipsAdmin.pojo.SysUserRole" >
+  <insert id="insert" parameterType="com.lips.dao.lipsAdmin.pojo.SysUserRole">
     insert into sys_user_role (user_id, role_id)
-    values (#{user_id,jdbcType=BIGINT}, #{role_id,jdbcType=BIGINT})
+    values (#{userId,jdbcType=BIGINT}, #{roleId,jdbcType=BIGINT})
   </insert>
-  <select id="selectAll" resultMap="BaseResultMap" >
+  <select id="selectAll" resultMap="BaseResultMap">
     select user_id, role_id
     from sys_user_role
   </select>

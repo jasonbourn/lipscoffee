@@ -39,7 +39,7 @@
 		<!-- 要生成哪些表-->
 		<table   tableName="%" >
 		<!-- 是否和数据库命名一致-->
-		 <property name="useActualColumnNames" value="true"/>
+		 <property name="useActualColumnNames" value="false"/>
 		</table>
 	</context>
 </generatorConfiguration>

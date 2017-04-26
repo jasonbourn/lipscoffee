@@ -2,24 +2,24 @@ package com.lips.dao.lipsAdmin.pojo;
 
 public class SysRolePermission {
     /** 角色id */
-    private Long role_id;
+    private Long roleId;
 
     /** 资源id */
-    private Long permission_id;
+    private Long permissionId;
 
-    public Long getRole_id() {
-        return role_id;
+    public Long getRoleId() {
+        return roleId;
     }
 
-    public void setRole_id(Long role_id) {
-        this.role_id = role_id;
+    public void setRoleId(Long roleId) {
+        this.roleId = roleId;
     }
 
-    public Long getPermission_id() {
-        return permission_id;
+    public Long getPermissionId() {
+        return permissionId;
     }
 
-    public void setPermission_id(Long permission_id) {
-        this.permission_id = permission_id;
+    public void setPermissionId(Long permissionId) {
+        this.permissionId = permissionId;
     }
 }

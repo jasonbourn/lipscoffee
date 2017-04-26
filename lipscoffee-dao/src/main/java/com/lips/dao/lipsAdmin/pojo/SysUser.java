@@ -7,13 +7,13 @@ public class SysUser {
     private Long id;
 
     /**  */
-    private Date createTime;
+    private Date createtime;
 
     /**  */
     private String email;
 
     /**  */
-    private Integer isAdmin;
+    private Integer isadmin;
 
     /** 是否禁用 0 显示 1 禁用 */
     private Integer disabled;
@@ -22,13 +22,13 @@ public class SysUser {
     private String password;
 
     /**  */
-    private String realName;
+    private String realname;
 
     /**  */
-    private String loginName;
+    private String loginname;
 
     /**  */
-    private Date updateTime;
+    private Date updatetime;
 
     public Long getId() {
         return id;
@@ -38,12 +38,12 @@ public class SysUser {
         this.id = id;
     }
 
-    public Date getCreateTime() {
-        return createTime;
+    public Date getCreatetime() {
+        return createtime;
     }
 
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
+    public void setCreatetime(Date createtime) {
+        this.createtime = createtime;
     }
 
     public String getEmail() {
@@ -54,12 +54,12 @@ public class SysUser {
         this.email = email == null ? null : email.trim();
     }
 
-    public Integer getIsAdmin() {
-        return isAdmin;
+    public Integer getIsadmin() {
+        return isadmin;
     }
 
-    public void setIsAdmin(Integer isAdmin) {
-        this.isAdmin = isAdmin;
+    public void setIsadmin(Integer isadmin) {
+        this.isadmin = isadmin;
     }
 
     public Integer getDisabled() {
@@ -78,27 +78,27 @@ public class SysUser {
         this.password = password == null ? null : password.trim();
     }
 
-    public String getRealName() {
-        return realName;
+    public String getRealname() {
+        return realname;
     }
 
-    public void setRealName(String realName) {
-        this.realName = realName == null ? null : realName.trim();
+    public void setRealname(String realname) {
+        this.realname = realname == null ? null : realname.trim();
     }
 
-    public String getLoginName() {
-        return loginName;
+    public String getLoginname() {
+        return loginname;
     }
 
-    public void setLoginName(String loginName) {
-        this.loginName = loginName == null ? null : loginName.trim();
+    public void setLoginname(String loginname) {
+        this.loginname = loginname == null ? null : loginname.trim();
     }
 
-    public Date getUpdateTime() {
-        return updateTime;
+    public Date getUpdatetime() {
+        return updatetime;
     }
 
-    public void setUpdateTime(Date updateTime) {
-        this.updateTime = updateTime;
+    public void setUpdatetime(Date updatetime) {
+        this.updatetime = updatetime;
     }
 }

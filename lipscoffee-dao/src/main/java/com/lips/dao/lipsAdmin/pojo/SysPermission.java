@@ -5,19 +5,19 @@ public class SysPermission {
     private Long id;
 
     /** 资源名称 */
-    private String permission_name;
+    private String permissionName;
 
     /** 资源类型（菜单:1，按钮:2） */
-    private Integer permission_type;
+    private Integer permissionType;
 
     /** 资源key(唯一值) */
-    private String permission_key;
+    private String permissionKey;
 
     /** 资源url */
-    private String permission_url;
+    private String permissionUrl;
 
     /** 图标 */
-    private String permission_icon;
+    private String permissionIcon;
 
     /** 权重 */
     private Integer weight;
@@ -39,44 +39,44 @@ public class SysPermission {
         this.id = id;
     }
 
-    public String getPermission_name() {
-        return permission_name;
+    public String getPermissionName() {
+        return permissionName;
     }
 
-    public void setPermission_name(String permission_name) {
-        this.permission_name = permission_name == null ? null : permission_name.trim();
+    public void setPermissionName(String permissionName) {
+        this.permissionName = permissionName == null ? null : permissionName.trim();
     }
 
-    public Integer getPermission_type() {
-        return permission_type;
+    public Integer getPermissionType() {
+        return permissionType;
     }
 
-    public void setPermission_type(Integer permission_type) {
-        this.permission_type = permission_type;
+    public void setPermissionType(Integer permissionType) {
+        this.permissionType = permissionType;
     }
 
-    public String getPermission_key() {
-        return permission_key;
+    public String getPermissionKey() {
+        return permissionKey;
     }
 
-    public void setPermission_key(String permission_key) {
-        this.permission_key = permission_key == null ? null : permission_key.trim();
+    public void setPermissionKey(String permissionKey) {
+        this.permissionKey = permissionKey == null ? null : permissionKey.trim();
     }
 
-    public String getPermission_url() {
-        return permission_url;
+    public String getPermissionUrl() {
+        return permissionUrl;
     }
 
-    public void setPermission_url(String permission_url) {
-        this.permission_url = permission_url == null ? null : permission_url.trim();
+    public void setPermissionUrl(String permissionUrl) {
+        this.permissionUrl = permissionUrl == null ? null : permissionUrl.trim();
     }
 
-    public String getPermission_icon() {
-        return permission_icon;
+    public String getPermissionIcon() {
+        return permissionIcon;
     }
 
-    public void setPermission_icon(String permission_icon) {
-        this.permission_icon = permission_icon == null ? null : permission_icon.trim();
+    public void setPermissionIcon(String permissionIcon) {
+        this.permissionIcon = permissionIcon == null ? null : permissionIcon.trim();
     }
 
     public Integer getWeight() {

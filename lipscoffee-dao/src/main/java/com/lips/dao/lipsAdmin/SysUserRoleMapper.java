@@ -5,7 +5,7 @@ import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
 public interface SysUserRoleMapper {
-    int deleteByPrimaryKey(@Param("user_id") Long user_id, @Param("role_id") Long role_id);
+    int deleteByPrimaryKey(@Param("userId") Long userId, @Param("roleId") Long roleId);
 
     int insert(SysUserRole record);
 
