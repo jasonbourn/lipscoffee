@@ -1,8 +1,10 @@
 package com.lips.dao.lipsAdmin;
 
 import com.lips.dao.lipsAdmin.pojo.SysUser;
-import java.util.List;
+import org.springframework.stereotype.Repository;
 
+import java.util.List;
+@Repository
 public interface SysUserMapper {
     int deleteByPrimaryKey(Long id);
 

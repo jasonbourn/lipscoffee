@@ -9,6 +9,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
 import java.util.Date;
@@ -37,5 +38,9 @@ public class TestController {
     @RequestMapping(value = "/pageTest",method = RequestMethod.POST,produces = MediaType.APPLICATION_JSON_VALUE)
     Result<PageInfo<SysUser>> pageTest() {
         return Result.createSuccess(testService.pageTest());
+    }
+    @RequestMapping(value = "/wsHome",method = RequestMethod.GET)
+    public ModelAndView wsHome(){
+        return new ModelAndView("ws");
     }
 }
